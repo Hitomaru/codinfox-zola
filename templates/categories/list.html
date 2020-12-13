@@ -1,8 +1,8 @@
 {% extends "page.html" %}
 
 {% block pagetitle %}
-    {% set t = config.title ~ "Categories" %}
-    {{ head::titlesite(page_title = t) }}
+{% set t = config.title ~ "Categories" %}
+{{ head::titlesite(page_title = t) }}
 {% endblock pagetitle %}
 
 {% block masthead %}
@@ -10,7 +10,7 @@
 {% endblock masthead %}
 
 {% block navigation_list %}
-   {{ sidebar::nav(navlist = sidebar_nav.nav, page_permalink = current_url) }}
+{{ sidebar::nav(navlist = sidebar_nav.nav, page_permalink = current_url) }}
 {% endblock navigation_list %}
 
 {% block page_content %}
@@ -21,7 +21,7 @@
         <a href="{{ category.permalink }}" class="post-tag">{{ category.name }}</a>
         {% endfor %}
     </div>
-    <hr/>
+    <hr />
     <div class="tags-expo-section">
         {% for category in terms %}
         <h2 id="{{ category.name }}">{{ category.name }}</h2>
@@ -30,7 +30,7 @@
             <a class="post-title" href="{{ post.permalink }}">
                 <li>
                     {{ post.title }}
-                    <small class="post-date">{{ post.date | date(format="%d %B %Y") }}</small>
+                    <small class="post-date">{{ post.date | date(format="%Y/%m/%d") }}</small>
                 </li>
             </a>
             {% endfor %}
