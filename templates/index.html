@@ -7,7 +7,7 @@
 {% set sidebar_nav = load_data(path="nav.toml") %}
 
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="{{ config.default_language }}">
 
   <head>
     {{ scripts::analytics_script() }}
