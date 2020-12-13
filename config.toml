@@ -122,6 +122,7 @@ logo = "/mylogo_2.png"
 
 version = "1.0.1"
 copyrightyear = "2020"
+copyright_attribute = "Silvano Sallese"
 
 # Puglins
 mathjax = true # whether support mathjax
